@@ -97,6 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $("html,body").animate({
     scrollTop:elementOffset 
-  },500);
+  },1000);
   
 });
