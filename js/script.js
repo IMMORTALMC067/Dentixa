@@ -89,13 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     })
 
-    $("[data-scroll]").on("click", function(event) {
-        event.preventDefault();
-        let elementId=$(this).data("scroll");
-        let elementOffset=$(elementId).offset().top;
+   $("[data-scroll]").on("click", function(event) {
+  event.preventDefault();
 
-        $("html, body").animate( {
-            scrollTop:elementOffset
-        },500);
-        
-    });
+  let elementId = $(this).data("scroll");
+  let elementOffset=$(elementId).offset().top;
+
+  $("html,body").animate({
+    scrollTop:elementOffset 
+  },500);
+  
+});
