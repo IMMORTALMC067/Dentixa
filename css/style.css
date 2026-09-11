@@ -71,19 +71,16 @@ section.visible {
 
 .header {
 	text-shadow: 0px 0px 10px #ffff;
-	top: 0;
-	left: 0;
-	z-index: 1000;
+	z-index: 10;
 	display: flex;
 	align-items: center;
 	height: 100px;
-	width: 100%;
+	
 }
 .header-fixed {
 	position: fixed;
 	width: 100%;
-	top: 0;
-	left: 0;
+	z-index: 10;
 }
 
 .header_top {
