@@ -92,5 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
     $("[data-scroll]").on("click", function(event) {
         event.preventDefault();
         let elementId=$(this).data("scroll");
-        console.log (elementId);
+        let elementOffset=$(elementId).offset().top;
+
+        $("html, body").animate( {
+            scrollTop:elementOffset
+        },500);
+        
     });
