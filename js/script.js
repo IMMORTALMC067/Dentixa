@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Закривати меню при кліку на посилання
+   
     document.querySelectorAll('.menu .nav_link').forEach(link => {
         link.addEventListener('click', () => {
             burger.classList.remove('open');
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Закривати меню при кліку поза ним
+    
     document.addEventListener('click', (e) => {
         if (menu && burger && !menu.contains(e.target) && !burger.contains(e.target)) {
             burger.classList.remove('open');
@@ -68,3 +68,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+    $(function() {
+        let home_screen=$("#home_screen");
+        let homeH_screen=home_screen.height();
+        let header=$("#header");
+        let scrollPos=$(window).scrollTop();
+        console.log(homeH_screen);
+
+    $(window).on("scroll load", function() {
+        scrollPos=$(this).scrollTop();
+
+        if (scrollPos>homeH_screen) {
+            header.addClass("fixed");
+        }
+        else {
+            header.removeClass("fixed");
+        }
+        console.log(scrollPos);
+    })
+    })
