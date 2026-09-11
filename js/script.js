@@ -88,3 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(scrollPos);
     })
     })
+
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+        let elementId=$(this).data("scroll");
+        console.log (elementId);
+    });
